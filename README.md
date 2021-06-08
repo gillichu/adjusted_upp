@@ -2,9 +2,9 @@
 Introduction 
 ===
 
-UPP2 is a wrapper around UPP, and is subsequently also a method for performing alignments of ultra-large and fragmentary datasets. Please find more details about UPP on its respective repository. We have two key strategies to note: 
+UPP2 is a wrapper around UPP, and is subsequently also a method for performing alignments of ultra-large and fragmentary datasets. Please find more details about [UPP on its respective repository](https://github.com/smirarab/sepp/blob/master/README.UPP.md). We have two key strategies to note: 
 
-* UPP (Fast)
+* UPP-hs (Hierarchical) 
 * UPP (Bitscore Weighting)
 
 For a particular query sequence and a particular HMM, we've made some changes to allow UPP to recalculate the bitscore by which it finds the "best" HMM match for a particular query sequence. This recalculation now takes into account the number of sequences summarized in the HMM. We call this the adjustedUPP strategy. 
@@ -66,4 +66,12 @@ UPP will be run with no parallelization. A later release may change this.
 
 * add option to run upp the way upp does i.e. should understand all the same flags and commands that upp does. 
 
-* refactor the stefanHMM_concurrent script and rename the files. 
+* refactor the stefanHMM_concurrent script and rename the files.
+
+* take out reference aln parameter, move save_scores.py into the score evaluation, take that flag out. 
+
+* take out the strategies
+
+* take out backbone and fragmentary sequences as input, move to running UPP as a module 
+
+* change it so that UPP-hs isn't running UPP all the way.
